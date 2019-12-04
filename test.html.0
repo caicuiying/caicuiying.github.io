@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>小花展示-demo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #000;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 90%;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .swiper-slide {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .gallery-top {
+      height: 80%;
+      width: 100%;
+    }
+    .gallery-thumbs {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0; 
+    }
+    .gallery-thumbs .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+    .gallery-thumbs .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(./images/nature-1.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/Snipaste_2019-12-03_09-42-29.png)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-3.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/aa.png)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-5.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-6.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-7.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-8.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-9.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-10.jpg)"></div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+  </div>
+  <div class="swiper-container gallery-thumbs">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(./images/nature-1.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/Snipaste_2019-12-03_09-42-29.png)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-3.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/aa.png)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-5.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-6.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-7.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-8.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-9.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-10.jpg)"></div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="./js/swiper.min.js"></script>
+<script>
+	var galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 4,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+	});
+	var galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 10,
+		navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	thumbs: {
+		swiper: galleryThumbs
+	}
+	});
+</script>
+</html>
